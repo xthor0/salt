@@ -1,5 +1,11 @@
-# we need some pkg.installeds here, but I haven't come up with that list yet
-# for now, just salt-minion and the repo it comes from
+{#
+
+I'm not sure there is a lot of value in managing this in. The Salt bootstrap script handles installing it
+and most VMs are stood up with salt-cloud. I'm killing this for now.
+
+By killing it - I mean, removing it from init.sls in linuxos...
+
+#}
 
 # centos systems
 {% if grains.get('os', '') == 'CentOS' %}
@@ -28,6 +34,7 @@ salt-latest:
 
 salt-minion:
   pkg.installed
+
 
 /etc/salt/minion:
   file.managed:
