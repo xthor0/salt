@@ -35,6 +35,7 @@ salt-minion:
     - user: root
     - group: root
     - mode: 600
+    - template: jinja
 
 salt-minion-service:
   service.running:
