@@ -1,2 +1,0 @@
-# salt
-Salt State Tree
